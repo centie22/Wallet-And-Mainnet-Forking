@@ -13,9 +13,8 @@ pragma solidity ^0.8.7;
 
     }
 
-    function deposit(uint _amount) public payable {
-         _amount = msg.value;
-        wallet[msg.sender] += _amount;
+    function deposit() public payable {
+        wallet[msg.sender] += msg.value;
     }
 
     function withdraw() public {
